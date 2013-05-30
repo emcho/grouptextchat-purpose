@@ -169,22 +169,23 @@
       <t>
         An additional security consideration might be the possibility
         for a large-scale conference to perform a flooding attack on a
-        chat room. To help prevent this clients could choose to require
-        an explicit user action before joining chatrooms, rather than
-        doing so automatically. In cases where such a constraint could
-        be considered to have negative impact on usability, clients may
-        still perform automatic joins if they can confirm a relationship
-        between the room and the conference (e.g. they both belong to
-        the same administrative domain, or domains that the client is
-        provisioned to consider as related).
+        chat room. To help prevent this, clients could choose to require
+        an explicit user action before joining chatrooms on behalf of
+        users. In cases where such a constraint could be considered to
+        have negative impact on usability and where automatic joins are
+        seen as important, clients may still perform them but only when
+        they can confirm a relationship between the room and the
+        conference (e.g. they both belong to the same administrative
+        domain, or domains that the client is provisioned to consider as
+        related).
       </t>
       <t>
         Furthermore, an attack on the auxiliary chatroom might be easier
         (or harder) than an attack on the main conference depending on
         the security policies in effect. Once again, clients would have
-        to make sure that users are notified about the security levels
-        of each component of the conference and that user-specified
-        privacy restrictions are applied to all of them.
+        to make sure that users are appropriately notified about the
+        security levels of each component of the conference and that
+        user-specified privacy restrictions are applied to all of them.
       </t>
     </section>
 
