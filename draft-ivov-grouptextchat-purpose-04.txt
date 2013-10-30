@@ -61,7 +61,7 @@ Internet-Draft        Entry Purpose: GroupTextChat          October 2013
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
+   2.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
    3.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      4.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
@@ -155,13 +155,13 @@ Internet-Draft        Entry Purpose: GroupTextChat          October 2013
    case in scenarios where the conference focus also provides a SIP
    signalled MSRP chat service at the same URI.
 
-2.  Security Considerations
-
-
-
-
-
-
+   Also, in some cases, servers could potentially advertise more than a
+   single chat room for a specific conference.  When this happens
+   clients supporting the "grouptextchat" purpose could present the user
+   with a choice or join multiple chats simultaneously.  Either way
+   there is to be no expectation about any content synchronization
+   between chat rooms.  If it exists such behaviour would be entirely
+   implementation specific.
 
 
 
@@ -169,6 +169,8 @@ Ivov                      Expires May 03, 2014                  [Page 3]
 
 Internet-Draft        Entry Purpose: GroupTextChat          October 2013
 
+
+2.  Security Considerations
 
    Advertising group text chats over SIP could provide malicious
    entities with the following attack vector: if a malicious entity is
@@ -216,8 +218,6 @@ Internet-Draft        Entry Purpose: GroupTextChat          October 2013
    large-scale conference to perform a flooding attack on a chat room.
    To help prevent this, clients could choose to require an explicit
    user action before joining chat rooms on behalf of users.  In cases
-   where such a constraint could be considered to have negative impact
-   on usability and where automatic joins are seen as important, clients
 
 
 
@@ -226,6 +226,8 @@ Ivov                      Expires May 03, 2014                  [Page 4]
 Internet-Draft        Entry Purpose: GroupTextChat          October 2013
 
 
+   where such a constraint could be considered to have negative impact
+   on usability and where automatic joins are seen as important, clients
    may still perform them but only when they can confirm a relationship
    between the room and the conference (e.g. they both belong to the
    same administrative domain, or domains that the client is provisioned
@@ -272,8 +274,6 @@ Internet-Draft        Entry Purpose: GroupTextChat          October 2013
 
 Appendix A.  Acknowledgements
 
-   Thanks to Jonathan Lennox, Mary Barnes, Paul Kyzivat, Peter Saint-
-   Andre, Rifaat Shekh-Yusef, and Saul Ibarra Corretge for their input.
 
 
 
@@ -281,6 +281,9 @@ Ivov                      Expires May 03, 2014                  [Page 5]
 
 Internet-Draft        Entry Purpose: GroupTextChat          October 2013
 
+
+   Thanks to Jonathan Lennox, Mary Barnes, Paul Kyzivat, Peter Saint-
+   Andre, Rifaat Shekh-Yusef, and Saul Ibarra Corretge for their input.
 
 Author's Address
 
@@ -291,9 +294,6 @@ Author's Address
 
    Phone: +33-177-624-330
    Email: emcho@jitsi.org
-
-
-
 
 
 

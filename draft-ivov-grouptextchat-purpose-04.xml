@@ -143,6 +143,15 @@
         focus also provides a SIP signalled MSRP chat service at the
         same URI.
       </t>
+      <t>
+        Also, in some cases, servers could potentially advertise more
+        than a single chat room for a specific conference. When this
+        happens clients supporting the "grouptextchat" purpose could
+        present the user with a choice or join multiple chats
+        simultaneously. Either way there is to be no expectation about
+        any content synchronization between chat rooms. If it exists
+        such behaviour would be entirely implementation specific.
+      </t>
     </section>
     <section title="Security Considerations" anchor="security">
       <t>
